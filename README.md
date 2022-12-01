@@ -32,7 +32,7 @@ import masq
 masq.simplex_noise(n_row=20, n_col=30, interpolate_value=0.5, size=0.8, show_point=False)
 ```
 
-<img src="https://raw.githubusercontent.com/MorvanZhou/marchingSquares/master/demo/complex.png" alt="drawing" width="450"/>
+<img src="https://raw.githubusercontent.com/MorvanZhou/marchingSquares/master/demo/simplex.png" alt="drawing" width="450"/>
 
 ## Play movement
 
@@ -43,7 +43,7 @@ import masq
 masq.loop_simplex_noise(20, 30, interpolate_value=0.5, size=0.8, increment=0.01)
 ```
 
-<img src="https://raw.githubusercontent.com/MorvanZhou/marchingSquares/master/demo/complex.gif" alt="drawing" width="450"/>
+<img src="https://raw.githubusercontent.com/MorvanZhou/marchingSquares/master/demo/simplex.gif" alt="drawing" width="450"/>
 
 
 ## Display points
@@ -55,4 +55,4 @@ import masq
 masq.simplex_noise(20, 30, interpolate_value=0.5, size=0.8, show_point=True)
 ```
 
-<img src="https://raw.githubusercontent.com/MorvanZhou/marchingSquares/master/demo/complex_dot.png" alt="drawing" width="450"/>
+<img src="https://raw.githubusercontent.com/MorvanZhou/marchingSquares/master/demo/simplex_dot.png" alt="drawing" width="450"/>
