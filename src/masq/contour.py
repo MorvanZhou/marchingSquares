@@ -90,7 +90,7 @@ class Contour:
     def __init__(
             self, canvas: tk.Canvas,
             left_top_points: tp.Tuple[float, float],
-            color="gray70",
+            color="gray80",
             pattern="normal",
     ):
         self.canvas: tk.Canvas = canvas

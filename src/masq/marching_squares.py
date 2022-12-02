@@ -20,7 +20,7 @@ class MarchingSquares(tk.Tk):
         self.contours: tp.List[tp.List[Contour]] = []
         self.count = 0
 
-    def reset(self, matrix: np.ndarray, row, col, interpolate_value=0.5, show_point=False):
+    def reset(self, matrix: np.ndarray, row, col, bound=0.5, show_point=False):
         width = col * const.UNIT
         height = row * const.UNIT
         self.canvas.config(height=height + const.UNIT * 0.2, width=width + const.UNIT * 0.2)
@@ -48,7 +48,7 @@ class MarchingSquares(tk.Tk):
                 p3 = self.points[r][c]
                 binary = ""
                 for p in [p3, p2, p1, p0]:
-                    if p.value > interpolate_value:
+                    if p.value > bound:
                         v = "1"
                     else:
                         v = "0"
@@ -73,11 +73,11 @@ class MarchingSquares(tk.Tk):
                 contour.draw(
                     case=binary,
                     corner_values=(p0.value, p1.value, p2.value, p3.value),
-                    interpolate_value=interpolate_value,
+                    interpolate_value=bound,
                 )
 
-    def draw(self, matrix: np.ndarray, interpolate_value=0.5, show_point=True):
+    def draw(self, matrix: np.ndarray, bound=0.5, show_point=True):
         n_row = matrix.shape[0] - 1
         n_col = matrix.shape[1] - 1
-        self.reset(matrix, n_row, n_col, interpolate_value, show_point)
+        self.reset(matrix, n_row, n_col, bound, show_point)
         self.update()
